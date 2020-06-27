@@ -18,10 +18,12 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints:
-            - "b7:44:ed:8b:e4:ee:87:ef:48:96:78:b1:e5:ce:68:a3"
+            - "72:62:0e:ae:f2:23:f3:95:6c:89:a8:45:18:45:c1:1a"
       - node/with-cache:
           steps:
             - run: npm install
+            - run: git config --global user.email "marchsabio@gmail.com"
+            - run: git config --global user.name "CI Circle Pipeline"
             - run: npm run deploy
 workflows:
     build-and-test:
