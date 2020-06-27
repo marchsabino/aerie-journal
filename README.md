@@ -1,27 +1,23 @@
-# AerieJournal
+# Aerie Journal
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8.
+![Current Version](https://img.shields.io/badge/Version%20-0.0.0-blue?style=flat-square) ![Angular](https://img.shields.io/badge/Angular%20-9.1.8-red?style=flat-square) ![Test Framework](https://img.shields.io/badge/Tests%20-Jest-blue?style=flat-square)
 
-## Development server
+The code behind the public-facing website for the University of Hartford's Literary Journal, [Aerie Journal](http://aeriejournal.com).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Development Server
 
-## Code scaffolding
+Run `npm start` to start the development server. Then navigate to `http://localhost:4200`. The app will automatically reload if you change any of the source files.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Building for Production
 
-## Build
+Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Running Unit Tests
 
-## Running unit tests
+Run `npm test` to execute the unit tests via [Jest](https://jestjs.io).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Contributing
 
-## Running end-to-end tests
+There are several ways to contribute to this project! If you have any questions, bug reports, or features you'd like to see in Aerie Journal you can report them on our [Issue Tracker](https://github.com/marchsabino/aerie-journal/issues).
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+If you are contributing code to this project, please fork this repository, make your changes, and open a Pull Request back into this project against the `develop` branch.
