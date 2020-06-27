@@ -16,7 +16,7 @@ jobs:
       name: node/default
     steps:
       - checkout
-      - add-ssh-keys:
+      - add_ssh_keys:
           fingerprints:
             - "b7:44:ed:8b:e4:ee:87:ef:48:96:78:b1:e5:ce:68:a3"
       - node/with-cache:
