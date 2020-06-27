@@ -11,7 +11,22 @@ jobs:
           steps:
             - run: npm install
             - run: npm test
+  deploy-gh-pages:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+        steps:
+          - run: npm install
+          - run: npm run deploy
 workflows:
     build-and-test:
       jobs:
         - build-and-test
+    deploy-gh-pages:
+      jobs:
+        - deploy-gh-pages
+          filters:
+            branches:
+              only: master
