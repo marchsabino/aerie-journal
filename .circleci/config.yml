@@ -25,6 +25,6 @@ workflows:
       jobs:
         - build-and-test
         - gh-pages
-        filters:
-          branches:
-            only: develop
+          filters:
+            branches:
+              only: develop
