@@ -26,7 +26,8 @@ workflows:
         - build-and-test
     deploy-gh-pages:
       jobs:
-        - deploy-gh-pages
+        - deploy-gh-pages:
           filters:
             branches:
-              only: master
+              only: 
+                - master
