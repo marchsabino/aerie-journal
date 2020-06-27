@@ -1,0 +1,72 @@
+$submission-btn-color-dark: #b8b8b8;
+$submission-btn-color-light: #111;
+
+nav {
+  a:focus {
+    outline: 0;
+  }
+
+  .navbar-brand {
+    font-weight: 700;
+  }
+
+  button.navbar-toggler {
+    padding: 0;
+    border: 0;
+
+    &:focus,
+    &:active {
+      outline: 0;
+    }
+  }
+
+  &.navbar-light {
+    button.submission-btn {
+      padding: 0.15rem 1rem;
+      color: $submission-btn-color-light;
+      border: 1px solid $submission-btn-color-light;
+
+      &:hover {
+        color: $submission-btn-color-dark;
+        background: $submission-btn-color-light;
+        border: 1px solid $submission-btn-color-light;
+      }
+    }
+
+    .navbar-toggler-icon {
+      background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      transition: background 0.25s ease;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+    }
+  }
+
+  &.navbar-dark {
+    button.submission-btn {
+      padding: 0.15rem 1rem;
+      color: $submission-btn-color-dark;
+      border: 1px solid $submission-btn-color-dark;
+
+      &:hover {
+        color: black;
+        background: white;
+        border: 1px solid white;
+      }
+    }
+
+    .navbar-toggler-icon {
+      background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      transition: background 0.25s ease;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+    }
+  }
+}
