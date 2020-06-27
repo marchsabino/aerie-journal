@@ -18,7 +18,7 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints:
-            - "b7:44:ed:8b:e4:ee:87:ef:48:96:78:b1:e5:ce:68:a3"
+            - "28:13:40:e1:05:b5:e9:06:4c:12:e3:22:5c:32:a3:e9"
       - node/with-cache:
           steps:
             - run: npm install
