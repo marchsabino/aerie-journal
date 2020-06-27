@@ -15,8 +15,9 @@ jobs:
     executor:
       name: node/default
     steps:
-        steps:
-          - run: npm run deploy
+      - node/with-cache:
+          steps:
+            - run: npm run deploy
 workflows:
     build-and-test:
       jobs:
