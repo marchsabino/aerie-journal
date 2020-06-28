@@ -1,7 +1,7 @@
 # Aerie Journal
 
 [![CircleCI](https://circleci.com/gh/marchsabino/aerie-journal.svg?style=svg)](https://app.circleci.com/pipelines/github/marchsabino/aerie-journal)
-![Current Version](https://img.shields.io/badge/Version%20-0.0.1-blue?style=flat-square) ![Angular](https://img.shields.io/badge/Angular%20-9.1.8-red?style=flat-square) ![Test Framework](https://img.shields.io/badge/Tests%20-Jest-blue?style=flat-square)
+![Current Version](https://img.shields.io/badge/Version%20-0.0.2-blue?style=flat-square) ![Angular](https://img.shields.io/badge/Angular%20-9.1.8-red?style=flat-square) ![Test Framework](https://img.shields.io/badge/Tests%20-Jest-blue?style=flat-square)
 
 The code behind the public-facing website for the University of Hartford's Literary Journal, [Aerie Journal](http://aeriejournal.com).
 
