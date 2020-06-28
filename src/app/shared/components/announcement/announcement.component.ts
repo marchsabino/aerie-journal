@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AnnouncementService } from '../../services/announcement.service';
 import { Announcement } from '../../models';
 @Component({
@@ -13,7 +13,10 @@ export class AnnouncementComponent implements OnInit {
 
   ngOnInit(): void {
     this.announcementService.getAnnouncement().subscribe((announcement) => {
-      this.announcement = announcement;
+      // If the expiration date is null, we should show it
+      if (announcement?.expiration ?? new Date() >= new Date()) {
+        this.announcement = announcement;
+      }
     });
   }
 }
