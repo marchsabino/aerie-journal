@@ -1,11 +1,11 @@
 {
   "name": "aerie-journal",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod",
-    "deploy": "ng deploy --base-href=https://marchsabino.github.io/aerie-journal/",
+    "deploy": "npm run build && ng deploy --base-href=https://marchsabino.github.io/aerie-journal/",
     "test": "ng test",
     "lint": "ng lint --fix",
     "e2e": "ng e2e"

@@ -1,5 +1,6 @@
 $submission-btn-color-dark: #b8b8b8;
 $submission-btn-color-light: #111;
+$header-bg: rgb(58, 84, 119);
 
 nav {
   a:focus {
@@ -33,14 +34,14 @@ nav {
       }
     }
 
-    .navbar-toggler-icon {
-      background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-      transition: background 0.25s ease;
+    button.navbar-toggler {
+      font-size: 1.4rem;
+      transition: color 0.25s ease;
+      border-radius: 0;
+      color: rgba(0, 0, 0, 0.7);
 
-      &:hover,
-      &:focus,
-      &:active {
-        background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      &:hover {
+        color: rgba(0, 0, 0, 0.9);
       }
     }
   }
@@ -58,15 +59,36 @@ nav {
       }
     }
 
-    .navbar-toggler-icon {
-      background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-      transition: background 0.25s ease;
+    button.navbar-toggler {
+      font-size: 1.4rem;
+      transition: color 0.25s ease;
+      border-radius: 0;
+      color: rgba(255, 255, 255, 0.5);
 
-      &:hover,
-      &:focus,
-      &:active {
-        background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      &:hover {
+        color: rgba(255, 2555, 255, 0.75);
       }
     }
+  }
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 14rem;
+  width: 100%;
+  color: white;
+  background: $header-bg;
+  box-sizing: border-box;
+
+  h1 {
+    padding-bottom: 0rem;
+    margin-bottom: 0.25rem;
+  }
+
+  span.caption {
+    font-size: 0.9rem;
   }
 }
