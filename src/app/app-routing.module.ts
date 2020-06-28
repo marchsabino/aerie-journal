@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { NewsfeedComponent } from './views/newsfeed/newsfeed.component';
 import { ArchivesComponent } from './views/archives/archives.component';
+import { HistoryComponent } from './views/history/history.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,11 @@ const routes: Routes = [
     path: 'archives',
     pathMatch: 'full',
     component: ArchivesComponent,
+  },
+  {
+    path: 'history',
+    pathMatch: 'full',
+    component: HistoryComponent,
   },
   {
     path: '**',
