@@ -1,0 +1,15 @@
+.announcement {
+  background: #fff3cd;
+
+  .alert {
+    padding-left: 0;
+
+    button {
+      padding-right: 0;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+}
