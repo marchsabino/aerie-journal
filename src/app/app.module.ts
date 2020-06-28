@@ -9,6 +9,7 @@ import { FooterComponent } from './core/footer/footer.component';
 import { ArchivesComponent } from './views/archives/archives.component';
 import { HistoryComponent } from './views/history/history.component';
 import { StaffComponent } from './views/staff/staff.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { StaffComponent } from './views/staff/staff.component';
     HistoryComponent,
     StaffComponent,
   ],
-  imports: [AppRoutingModule, BrowserModule],
+  imports: [AppRoutingModule, BrowserModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent],
 })
