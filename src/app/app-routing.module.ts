@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { NewsfeedComponent } from './views/newsfeed/newsfeed.component';
 import { ArchivesComponent } from './views/archives/archives.component';
 import { HistoryComponent } from './views/history/history.component';
+import { StaffComponent } from './views/staff/staff.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,11 @@ const routes: Routes = [
     path: 'history',
     pathMatch: 'full',
     component: HistoryComponent,
+  },
+  {
+    path: 'staff',
+    pathMatch: 'full',
+    component: StaffComponent,
   },
   {
     path: '**',

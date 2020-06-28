@@ -1,0 +1,20 @@
+table {
+  border-top: 0;
+
+  tr {
+    td:first-child {
+      width: 32px;
+    }
+  }
+
+  thead {
+    th {
+      border-top: 0;
+    }
+  }
+
+  img {
+    height: 32px;
+    width: 32px;
+  }
+}

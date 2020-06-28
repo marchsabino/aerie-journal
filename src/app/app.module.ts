@@ -8,6 +8,7 @@ import { NewsfeedComponent } from './views/newsfeed/newsfeed.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { ArchivesComponent } from './views/archives/archives.component';
 import { HistoryComponent } from './views/history/history.component';
+import { StaffComponent } from './views/staff/staff.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { HistoryComponent } from './views/history/history.component';
     FooterComponent,
     ArchivesComponent,
     HistoryComponent,
+    StaffComponent,
   ],
   imports: [AppRoutingModule, BrowserModule],
   providers: [],
