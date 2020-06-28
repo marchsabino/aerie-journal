@@ -1,0 +1,28 @@
+<div class="my-3 p-3 bg-white rounded shadow-sm">
+  <h6 class="border-bottom border-gray pb-2 mb-0">Recent updates</h6>
+  <ng-container *ngIf="!articles; else showArticles">
+    <div class="media text-muted pt-3">
+      There are currently no news articles...
+    </div>
+  </ng-container>
+  <ng-template #showArticles>
+    <ng-container *ngFor="let article of articles">
+      <div class="media pt-3">
+        <img
+          class="mr-2 rounded"
+          [src]="article.author.profileImage.content"
+          [alt]="article.author.email" />
+        <div class="media-body pb-3 mb-0 small lh-125 border-bottom
+          border-gray">
+          <strong class="d-block text-gray-dark">
+            {{ article.title | titlecase }}
+          </strong>
+          <div [innerHtml]="article.content"></div>
+        </div>
+      </div>
+    </ng-container>
+    <small class="d-block text-right mt-3">
+      <a routerLink="/">All updates</a>
+    </small>
+  </ng-template>
+</div>
