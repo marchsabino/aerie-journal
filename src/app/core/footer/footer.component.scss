@@ -1,0 +1,21 @@
+footer {
+  margin: 3rem 0;
+  font-size: 0.9rem;
+
+  i {
+    font-size: 1.25rem;
+  }
+
+  a {
+    &:link,
+    &:visited,
+    &:active {
+      color: #787788;
+      transition: color 0.25s ease;
+    }
+
+    &:hover {
+      color: #44444e;
+    }
+  }
+}
