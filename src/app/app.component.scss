@@ -1,8 +1,14 @@
 .announcement {
   background: #fff3cd;
 
-  .alert {
+  .alert,
+  .alert-warning {
     padding-left: 0;
+    border: 0;
+
+    p {
+      margin-bottom: 0;
+    }
 
     button {
       padding-right: 0;
