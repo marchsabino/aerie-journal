@@ -6,19 +6,18 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component';
 import { NewsfeedComponent } from './views/newsfeed/newsfeed.component';
 import { FooterComponent } from './core/footer/footer.component';
+import { ArchivesComponent } from './views/archives/archives.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NewsfeedComponent,
-    FooterComponent
+    FooterComponent,
+    ArchivesComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [AppRoutingModule, BrowserModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

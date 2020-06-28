@@ -10,13 +10,22 @@
     data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent"
     aria-expanded="false"
-    aria-label="Toggle navigation">
+    aria-label="Toggle navigation"
+  >
     <i class="fas fa-bars"></i>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <div class="navbar-nav mr-auto">
-      <a class="nav-link active" routerLink="/">Home</a>
-      <a class="nav-link" routerLink="/">Archives</a>
+      <a
+        class="nav-link"
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Home</a
+      >
+      <a class="nav-link" routerLink="/archives" routerLinkActive="active">
+        Archives
+      </a>
       <a class="nav-link" routerLink="/">History</a>
       <a class="nav-link" routerLink="/">Staff</a>
     </div>
