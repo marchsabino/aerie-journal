@@ -53,7 +53,7 @@ export class NewsFeedService {
       {
         title: 'AERIE 2017 COVER CONTEST!',
         content:
-          "We are now accepting entries for the 2017 Cover Contest! SEND YOUR ARTWORK AS A JPEG to: aerie.art.submit@gmail.com Each artist may send up to six images. The winner will have his or her work featured on the cover of AERIE 2017 and will receive a gift card to Jerry's Artarama. DEADLINE NOVEMBER 30th, 2016.",
+          'We are now accepting entries for the 2017 Cover Contest! SEND YOUR ARTWORK AS A JPEG to: aerie.art.submit@gmail.com Each artist may send up to six images. The winner will have his or her work featured on the cover of AERIE 2017 and will receive a gift card to Jerry\'s Artarama. DEADLINE NOVEMBER 30th, 2016.',
         createdAt: new Date(),
         updatedAt: new Date(),
         author: {
