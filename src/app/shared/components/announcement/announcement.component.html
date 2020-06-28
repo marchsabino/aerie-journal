@@ -1,8 +1,8 @@
-<div class="announcement">
+<div *ngIf="announcement" class="announcement">
   <div class="container">
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
-      <strong>{{ title | titlecase }}</strong>
-      <p>{{ message }}</p>
+      <strong>{{ announcement.title || "Announcement" | titlecase }}</strong>
+      <p>{{ announcement.content }}</p>
       <button
         type="button"
         class="close"

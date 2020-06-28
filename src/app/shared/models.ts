@@ -34,3 +34,9 @@ export interface Archive extends BaseArtifact {
   content: string;
   coverImage?: Image;
 }
+
+export interface Announcement extends BaseArtifact {
+  title?: string;
+  content: string;
+  expiration?: Date;
+}
