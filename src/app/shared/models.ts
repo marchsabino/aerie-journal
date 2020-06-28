@@ -16,7 +16,7 @@ export interface NewsArticle extends BaseArtifact {
   content: string;
 }
 
-export interface ProfileImage {
+export interface Image {
   content: string;
 }
 
@@ -26,5 +26,17 @@ export interface User extends BaseArtifact {
   email: string;
   privilege: Privilege;
   position: string;
-  profileImage?: ProfileImage;
+  profileImage?: Image;
+}
+
+export interface Archive extends BaseArtifact {
+  title: string;
+  content: string;
+  coverImage?: Image;
+}
+
+export interface Announcement extends BaseArtifact {
+  title?: string;
+  content: string;
+  expiration?: Date;
 }
