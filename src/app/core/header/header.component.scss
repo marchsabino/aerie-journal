@@ -1,5 +1,6 @@
 $submission-btn-color-dark: #b8b8b8;
 $submission-btn-color-light: #111;
+$header-bg: rgb(58, 84, 119);
 
 nav {
   a:focus {
@@ -68,5 +69,26 @@ nav {
         color: rgba(255, 2555, 255, 0.75);
       }
     }
+  }
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 14rem;
+  width: 100%;
+  color: white;
+  background: $header-bg;
+  box-sizing: border-box;
+
+  h1 {
+    padding-bottom: 0rem;
+    margin-bottom: 0.25rem;
+  }
+
+  span.caption {
+    font-size: 0.9rem;
   }
 }
