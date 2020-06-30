@@ -4,6 +4,7 @@ import { NewsfeedComponent } from './views/newsfeed/newsfeed.component';
 import { ArchivesComponent } from './views/archives/archives.component';
 import { HistoryComponent } from './views/history/history.component';
 import { StaffComponent } from './views/staff/staff.component';
+import { LoginComponent } from './views/login/login.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,11 @@ const routes: Routes = [
     path: 'staff',
     pathMatch: 'full',
     component: StaffComponent,
+  },
+  {
+    path: 'login',
+    pathMatch: 'full',
+    component: LoginComponent,
   },
   {
     path: '**',

@@ -1,0 +1,32 @@
+.form-signin {
+  margin: auto;
+  width: 60%;
+  max-width: 25rem;
+
+  h1 {
+    margin: 1.5rem 0;
+    text-align: center;
+    font-size: 1.25rem;
+  }
+
+  input,
+  .form-control {
+    &:focus,
+    &:active {
+      outline: 0;
+      box-shadow: none;
+    }
+  }
+
+  input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  input[type="password"] {
+    margin-bottom: 1rem;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+}

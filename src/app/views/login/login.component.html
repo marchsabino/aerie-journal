@@ -1,1 +1,31 @@
-<p>login works!</p>
+<div class="my-3 p-3 bg-white rounded shadow-sm">
+  <h6 class="border-bottom border-gray pb-2 mb-3">
+    Staff Sign-in
+  </h6>
+  <form class="form-signin">
+    <h1>Sign in to Aerie Journal</h1>
+    <label class="sr-only" for="inputEmail">Email Address</label>
+    <input
+      id="inputEmail"
+      class="form-control"
+      type="email"
+      placeholder="Email address"
+      required
+      autofocus
+    />
+    <label class="sr-only" for="inputPassword">Password</label>
+    <input
+      id="inputPassword"
+      class="form-control"
+      type="password"
+      placeholder="Password"
+      required
+    />
+    <button class="btn btn-md btn-success btn-block mb-3" type="submit">
+      Sign in
+    </button>
+    <small class="d-block mb-3">
+      <a routerLink="/login">Forgot password</a>
+    </small>
+  </form>
+</div>
