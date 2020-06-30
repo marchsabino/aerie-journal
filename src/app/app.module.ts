@@ -10,18 +10,12 @@ import { ArchivesComponent } from './views/archives/archives.component';
 import { HistoryComponent } from './views/history/history.component';
 import { StaffComponent } from './views/staff/staff.component';
 import { SharedModule } from './shared/shared.module';
+import { LoginComponent } from './views/login/login.component';
+import { ViewsModule } from './views/views.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    NewsfeedComponent,
-    FooterComponent,
-    ArchivesComponent,
-    HistoryComponent,
-    StaffComponent,
-  ],
-  imports: [AppRoutingModule, BrowserModule, SharedModule],
+  declarations: [AppComponent, HeaderComponent, FooterComponent],
+  imports: [AppRoutingModule, BrowserModule, SharedModule, ViewsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
