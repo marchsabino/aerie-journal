@@ -12,9 +12,14 @@ export class UserService {
 
   setCurrentUser(user: User): void {
     this.currentUser.next(user);
+    sessionStorage.setItem('currentUser', JSON.stringify(user));
   }
 
   getCurrentUser(): Observable<User> {
+    const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+    if (currentUser) {
+      this.setCurrentUser(currentUser);
+    }
     return this.currentUser.asObservable();
   }
 
