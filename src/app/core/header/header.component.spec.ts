@@ -12,7 +12,7 @@ describe('HeaderComponent', () => {
       providers: [HeaderComponent],
     }).compileComponents();
 
-    component = TestBed.get(HeaderComponent);
+    component = TestBed.inject(HeaderComponent);
   }));
 
   it('should create', () => {

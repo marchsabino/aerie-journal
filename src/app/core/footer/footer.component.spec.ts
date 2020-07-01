@@ -10,7 +10,7 @@ describe('FooterComponent', () => {
       providers: [FooterComponent],
     }).compileComponents();
 
-    component = TestBed.get(FooterComponent);
+    component = TestBed.inject(FooterComponent);
   }));
 
   it('should create', () => {

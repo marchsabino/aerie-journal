@@ -16,6 +16,28 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <div class="navbar-nav mr-auto">
+      <div
+        *ngIf="currentUser"
+        class="d-block d-md-none border-bottom border-secondary pt-2 pb-3 mb-3"
+      >
+        <img
+          class="rounded d-inline-block"
+          [src]="currentUser.profileImage?.content"
+        />
+        <div class="d-inline-block">
+          <strong class="text-light">
+            {{ currentUser.firstName | titlecase }}
+            {{ currentUser.lastName | titlecase }}
+          </strong>
+          <br />
+          <span class="badge badge-primary">{{
+            currentUser.privilege | privilege
+          }}</span>
+          <span class="badge badge-secondary ml-1">{{
+            currentUser.position | titlecase
+          }}</span>
+        </div>
+      </div>
       <a
         class="nav-link"
         routerLink="/"
@@ -23,6 +45,14 @@
         [routerLinkActiveOptions]="{ exact: true }"
         >Home</a
       >
+      <a
+        *ngIf="currentUser"
+        class="nav-link"
+        routerLink="/staff"
+        routerLinkActive="active"
+      >
+        Control Panel
+      </a>
       <a class="nav-link" routerLink="/archives" routerLinkActive="active">
         Archives
       </a>
@@ -32,6 +62,14 @@
       <a class="nav-link" routerLink="/staff" routerLinkActive="active">
         Staff
       </a>
+      <div
+        *ngIf="currentUser"
+        class="border-top border-secondary mt-3 pt-2 pb-2 d-block d-md-none"
+      >
+        <a class="nav-link" (click)="logout()">
+          Logout
+        </a>
+      </div>
     </div>
   </div>
   <div class="navbar-nav mr-auto d-none d-md-block">

@@ -10,7 +10,7 @@ describe('AnnouncementComponent', () => {
       providers: [AnnouncementComponent],
     }).compileComponents();
 
-    component = TestBed.get(AnnouncementComponent);
+    component = TestBed.inject(AnnouncementComponent);
   }));
 
   it('should create', () => {

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/shared/models';
+import { UserService } from 'src/app/shared/services/user.service';
 
 @Component({
   selector: 'app-header',
@@ -7,8 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   today = new Date();
+  currentUser: User;
 
-  constructor() {}
+  constructor(private userService: UserService) {}
 
-  ngOnInit(): void {}
+  logout(): void {
+    this.userService.setCurrentUser(null);
+  }
+
+  ngOnInit(): void {
+    this.userService.getCurrentUser().subscribe((user) => {
+      this.currentUser = user;
+    });
+  }
 }

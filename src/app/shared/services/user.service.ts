@@ -1,12 +1,22 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable, of, ReplaySubject } from 'rxjs';
 import { User, Privilege } from '../models';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
+  private currentUser = new ReplaySubject<User>(1);
+
   constructor() {}
+
+  setCurrentUser(user: User): void {
+    this.currentUser.next(user);
+  }
+
+  getCurrentUser(): Observable<User> {
+    return this.currentUser.asObservable();
+  }
 
   getUsers(): Observable<User[]> {
     return of([

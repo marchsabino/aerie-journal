@@ -12,7 +12,7 @@ describe('AppComponent', () => {
       providers: [AppComponent],
     }).compileComponents();
 
-    component = TestBed.get(AppComponent);
+    component = TestBed.inject(AppComponent);
   }));
 
   it('should create the app', () => {
