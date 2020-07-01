@@ -21,10 +21,10 @@
         class="d-block d-md-none border-bottom border-secondary pt-2 pb-3 mb-3"
       >
         <img
-          class="rounded d-inline-block"
+          class="float-left rounded d-block"
           [src]="currentUser.profileImage?.content"
         />
-        <div class="d-inline-block">
+        <div class="float-left d-block">
           <strong class="text-light">
             {{ currentUser.firstName | titlecase }}
             {{ currentUser.lastName | titlecase }}
