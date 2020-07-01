@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { NewsfeedComponent } from './newsfeed/newsfeed.component';
 import { StaffComponent } from './staff/staff.component';
 import { RouterModule } from '@angular/router';
+import { ControlPanelModule } from './control-panel/control-panel.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { RouterModule } from '@angular/router';
     NewsfeedComponent,
     StaffComponent,
   ],
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, ControlPanelModule],
   exports: [
     ArchivesComponent,
     HistoryComponent,

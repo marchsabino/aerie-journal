@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/shared/services/user.service';
 import { Privilege } from 'src/app/shared/models';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,7 @@ import { Privilege } from 'src/app/shared/models';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  constructor(private userService: UserService) {}
+  constructor(private router: Router, private userService: UserService) {}
 
   login(event: Event) {
     event.preventDefault();
@@ -25,6 +26,8 @@ export class LoginComponent implements OnInit {
       createdAt: new Date(),
       updatedAt: new Date(),
     });
+
+    this.router.navigate(['/']);
   }
 
   ngOnInit(): void {}

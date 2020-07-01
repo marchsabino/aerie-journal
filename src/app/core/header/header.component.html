@@ -48,7 +48,7 @@
       <a
         *ngIf="currentUser"
         class="nav-link"
-        routerLink="/staff"
+        routerLink="/control-panel"
         routerLinkActive="active"
       >
         Control Panel
@@ -78,14 +78,66 @@
     </button>
   </div>
 </nav>
-<header class="text-center text-md-left">
-  <div class="container">
-    <h1>Aerie Journal</h1>
-    <span class="caption">
-      The University of Hartford's Literary Magazine
-      <span class="todays-date d-none d-md-inline">
-        | {{ today | date: "MMMM dd, yyyy" }}
+<ng-container *ngIf="showHeader; else showScrollingNav">
+  <header lass="text-center text-md-left">
+    <div class="container">
+      <h1>Aerie Journal</h1>
+      <span class="caption">
+        The University of Hartford's Literary Magazine
+        <span class="todays-date d-none d-md-inline">
+          | {{ today | date: "MMMM dd, yyyy" }}
+        </span>
       </span>
-    </span>
+    </div>
+  </header>
+</ng-container>
+
+<ng-template #showScrollingNav>
+  <div class="nav-scroller bg-white shadow-sm">
+    <nav class="nav navbar-light nav-underline">
+      <a
+        class="nav-link"
+        routerLink="/control-panel/dashboard"
+        routerLinkActive="active"
+      >
+        Dashboard
+      </a>
+      <a
+        class="nav-link"
+        routerLink="/control-panel/forums"
+        routerLinkActive="active"
+      >
+        Forums
+      </a>
+      <a
+        class="nav-link"
+        routerLink="/control-panel/announcements"
+        routerLinkActive="active"
+      >
+        Announcements
+      </a>
+      <a
+        class="nav-link"
+        routerLink="/control-panel/members"
+        routerLinkActive="active"
+      >
+        Members
+      </a>
+      <a
+        *ngIf="currentUser.privilege >= 2"
+        class="nav-link"
+        routerLink="/control-panel/archives"
+        routerLinkActive="active"
+      >
+        Archives
+      </a>
+      <a
+        class="nav-link"
+        routerLink="/control-panel/settings"
+        routerLinkActive="active"
+      >
+        Settings
+      </a>
+    </nav>
   </div>
-</header>
+</ng-template>
