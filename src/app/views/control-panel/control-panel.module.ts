@@ -6,6 +6,7 @@ import { MembersComponent } from './members/members.component';
 import { SettingsComponent } from './settings/settings.component';
 import { ManageArchivesComponent } from './manage-archives/manage-archives.component';
 import { ForumsModule } from './forums/forums.module';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,6 @@ import { ForumsModule } from './forums/forums.module';
     SettingsComponent,
     ManageArchivesComponent,
   ],
-  imports: [CommonModule, ForumsModule],
+  imports: [CommonModule, ForumsModule, SharedModule],
 })
 export class ControlPanelModule {}
