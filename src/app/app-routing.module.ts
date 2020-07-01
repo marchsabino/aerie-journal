@@ -12,6 +12,7 @@ import { MembersComponent } from './views/control-panel/members/members.componen
 import { ManageArchivesComponent } from './views/control-panel/manage-archives/manage-archives.component';
 import { SettingsComponent } from './views/control-panel/settings/settings.component';
 import { RoleGuard } from './shared/guards/role.guard';
+import { LoginGuard } from './shared/guards/login.guard';
 import { Privilege } from './shared/models';
 
 const routes: Routes = [
@@ -37,6 +38,7 @@ const routes: Routes = [
   },
   {
     path: 'login',
+    canActivate: [LoginGuard],
     pathMatch: 'full',
     component: LoginComponent,
   },

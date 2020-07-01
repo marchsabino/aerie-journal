@@ -6,7 +6,7 @@ import { User } from '../models';
   providedIn: 'root',
 })
 export class RoleGuard implements CanActivate {
-  constructor(public router: Router) {}
+  constructor(private router: Router) {}
 
   canActivate(route: ActivatedRouteSnapshot): boolean {
     const minPrivilege = route.data.minPrivilege;
