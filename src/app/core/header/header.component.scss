@@ -3,7 +3,9 @@ $submission-btn-color-light: #111;
 $header-bg: rgb(58, 84, 119);
 
 nav {
-  a:focus {
+  a:focus,
+  a:hover {
+    cursor: pointer;
     outline: 0;
   }
 
