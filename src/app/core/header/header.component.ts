@@ -27,6 +27,7 @@ export class HeaderComponent implements OnInit {
 
   logout(): void {
     this.userService.setCurrentUser(null);
+    this.router.navigate(['/']);
   }
 
   ngOnInit(): void {

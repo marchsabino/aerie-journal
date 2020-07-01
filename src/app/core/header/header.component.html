@@ -62,6 +62,13 @@
       <a class="nav-link" routerLink="/staff" routerLinkActive="active">
         Staff
       </a>
+      <a
+        *ngIf="currentUser"
+        class="nav-link d-none d-md-block"
+        (click)="logout()"
+      >
+        Logout
+      </a>
       <div
         *ngIf="currentUser"
         class="border-top border-secondary mt-3 pt-2 pb-2 d-block d-md-none"
