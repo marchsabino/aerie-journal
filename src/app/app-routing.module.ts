@@ -11,6 +11,8 @@ import { AnnouncementsComponent } from './views/control-panel/announcements/anno
 import { MembersComponent } from './views/control-panel/members/members.component';
 import { ManageArchivesComponent } from './views/control-panel/manage-archives/manage-archives.component';
 import { SettingsComponent } from './views/control-panel/settings/settings.component';
+import { RoleGuard } from './shared/guards/role.guard';
+import { Privilege } from './shared/models';
 
 const routes: Routes = [
   {
@@ -40,8 +42,10 @@ const routes: Routes = [
   },
   {
     path: 'control-panel',
+    canActivate: [RoleGuard],
     data: {
       showHeader: false,
+      minPrivilege: Privilege.STAFF,
     },
     children: [
       {
@@ -68,7 +72,11 @@ const routes: Routes = [
       },
       {
         path: 'archives',
+        canActivate: [RoleGuard],
         component: ManageArchivesComponent,
+        data: {
+          minPrivilege: Privilege.ADMIN,
+        },
       },
       {
         path: 'settings',
