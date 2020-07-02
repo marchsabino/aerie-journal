@@ -1,22 +1,19 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { async, TestBed } from '@angular/core/testing';
 import { MembersComponent } from './members.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 describe('MembersComponent', () => {
   let component: MembersComponent;
-  let fixture: ComponentFixture<MembersComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MembersComponent ]
-    })
-    .compileComponents();
+      imports: [SharedModule],
+      providers: [MembersComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MembersComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    component = TestBed.inject(MembersComponent);
   });
 
   it('should create', () => {

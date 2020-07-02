@@ -1,0 +1,27 @@
+table {
+  img {
+    width: 32px;
+    height: 32px;
+  }
+
+  span.badge {
+    &:first-child {
+      margin-right: 0.25rem;
+    }
+  }
+}
+
+form {
+  .form-control {
+    &:focus {
+      box-shadow: none;
+      border-color: #ced4da;
+    }
+  }
+
+  label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+}

@@ -28,7 +28,7 @@ export class UserService {
       {
         firstName: 'Sophia',
         lastName: 'Clark',
-        email: '',
+        email: 'marchsabino@gmail.com',
         privilege: Privilege.STAFF,
         position: 'Fundraising & Grants Editor',
         createdAt: new Date(),
@@ -37,7 +37,7 @@ export class UserService {
       {
         firstName: 'Listra',
         lastName: 'Mitchell-Simmons',
-        email: '',
+        email: 'marchsabino@gmail.com',
         privilege: Privilege.STAFF,
         position: 'Editor',
         createdAt: new Date(),
@@ -46,7 +46,7 @@ export class UserService {
       {
         firstName: 'Prachi',
         lastName: 'Bhandutia',
-        email: '',
+        email: 'marchsabino@gmail.com',
         privilege: Privilege.STAFF,
         position: 'Advertising Editor',
         createdAt: new Date(),
@@ -55,7 +55,7 @@ export class UserService {
       {
         firstName: 'Gabriella',
         lastName: 'Navas',
-        email: '',
+        email: 'marchsabino@gmail.com',
         privilege: Privilege.STAFF,
         position: 'Poetry Editor',
         createdAt: new Date(),
@@ -64,7 +64,7 @@ export class UserService {
       {
         firstName: 'Domenic',
         lastName: 'Burby',
-        email: '',
+        email: 'marchsabino@gmail.com',
         privilege: Privilege.STAFF,
         position: 'Fiction Editor',
         createdAt: new Date(),
@@ -73,7 +73,7 @@ export class UserService {
       {
         firstName: 'Bryana',
         lastName: 'Rivera',
-        email: '',
+        email: 'marchsabino@gmail.com',
         privilege: Privilege.STAFF,
         position: 'Secretary',
         createdAt: new Date(),
@@ -82,7 +82,7 @@ export class UserService {
       {
         firstName: 'Estela',
         lastName: 'Laureano',
-        email: '',
+        email: 'marchsabino@gmail.com',
         privilege: Privilege.STAFF,
         position: 'Events Editor',
         createdAt: new Date(),
@@ -91,7 +91,7 @@ export class UserService {
       {
         firstName: 'Terrence',
         lastName: 'White',
-        email: '',
+        email: 'marchsabino@gmail.com',
         privilege: Privilege.STAFF,
         position: 'Art Editor',
         createdAt: new Date(),
@@ -100,7 +100,7 @@ export class UserService {
       {
         firstName: 'Benjamin',
         lastName: 'Grossberg',
-        email: '',
+        email: 'marchsabino@gmail.com',
         privilege: Privilege.ADMIN,
         position: 'Supervisor',
         profileImage: {
