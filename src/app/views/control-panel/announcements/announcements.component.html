@@ -1,1 +1,33 @@
-<p>announcements works!</p>
+<div class="my-3 p-3 bg-white rounded shadow-sm">
+  <h6 class="border-bottom border-gray pb-2 mb-3">Create an Announcement</h6>
+  <div class="row">
+    <div class="mx-auto col-md-8 col-lg-6">
+      <input type="text" class="form-control" placeholder="Title" />
+      <textarea
+        [(ngModel)]="content"
+        class="form-control"
+        placeholder="Enter announcement text..."
+        maxlength="140"
+      >
+        {{ content }}
+      </textarea>
+      <span
+        class="pt-1 d-block text-right small"
+        [ngClass]="{
+          'text-muted': content.length < 120,
+          'text-danger': content.length >= 120
+        }"
+      >
+        {{ content.length }}/140
+      </span>
+      <button class="mt-3 btn btn-primary btn-sm form-control">
+        Submit
+      </button>
+    </div>
+  </div>
+
+  <h6 class="border-bottom border-gray pb-2 mt-4 mb-3">
+    Existing Announcements
+  </h6>
+  TODO - DATA TABLE!
+</div>
