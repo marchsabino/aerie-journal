@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/shared/services/user.service';
-import { User } from 'src/app/shared/models';
+import { User, Privilege } from 'src/app/shared/models';
 
 @Component({
   selector: 'app-members',
@@ -12,6 +12,16 @@ export class MembersComponent implements OnInit {
   members: User[];
 
   constructor(private userService: UserService) {}
+
+  deletePopup(): void {
+    window.confirm('Are you sure you wish to delete the selected users?');
+  }
+
+  getStaffMembers(): User[] {
+    return this.members.filter((user) => {
+      return user.privilege === Privilege.STAFF;
+    });
+  }
 
   ngOnInit(): void {
     this.userService.getUsers().subscribe((users) => {
