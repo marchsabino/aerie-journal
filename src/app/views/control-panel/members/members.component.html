@@ -30,8 +30,11 @@
             <span class="d-none d-sm-inline badge badge-primary">{{
               member.privilege | privilege
             }}</span>
-            <span class="badge badge-secondary">{{
+            <span class="d-none d-sm-inline badge badge-secondary">{{
               member.position | titlecase
+            }}</span>
+            <span class="d-inline d-sm-none badge badge-secondary">{{
+              member.position.split(" ").pop()
             }}</span>
           </td>
         </tr>
