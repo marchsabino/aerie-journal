@@ -8,7 +8,7 @@ import { User } from '../../models';
 })
 export class ProfileImageComponent implements OnInit {
   @Input() user: User;
-  @Input() alt = "User's Profile Image";
+  @Input() alt = 'User\'s Profile Image';
   @Input() width = '32px';
   @Input() height = '32px';
 
