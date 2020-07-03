@@ -1,0 +1,17 @@
+.dropzone {
+  width: 100%;
+  min-height: 8rem;
+  padding: 2rem;
+  text-align: center;
+  border: 1px dashed rgb(160, 160, 160);
+  box-sizing: border-box;
+
+  h1 {
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+  }
+
+  &.fileover {
+    border: 1px dashed rgb(51, 121, 34);
+  }
+}

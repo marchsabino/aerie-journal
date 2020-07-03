@@ -15,7 +15,8 @@ export class ActionButtonComponent implements OnInit {
 
   constructor() {}
 
-  onClick(event: any): void {
+  onClick(event: MouseEvent): void {
+    event.preventDefault();
     this.loading = true;
     setTimeout(() => {
       this.loading = false;

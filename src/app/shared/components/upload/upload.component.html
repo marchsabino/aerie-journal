@@ -1,0 +1,14 @@
+<div class="dropzone" appDroppable (fileDropped)="onFileDropped($event)">
+  <input
+    type="file"
+    #fileDropRef
+    id="fileDropRef"
+    [accept]="accept.join()"
+    (change)="fileBrowseHandler($event.target.files)"
+    hidden
+  />
+  <h1>Drag and Drop Files Here</h1>
+  <label for="fileDropRef" class="btn btn-primary btn-sm">
+    or Browse for Files
+  </label>
+</div>
