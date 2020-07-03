@@ -7,6 +7,7 @@ import { NewsfeedComponent } from './newsfeed/newsfeed.component';
 import { StaffComponent } from './staff/staff.component';
 import { RouterModule } from '@angular/router';
 import { ControlPanelModule } from './control-panel/control-panel.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { ControlPanelModule } from './control-panel/control-panel.module';
     NewsfeedComponent,
     StaffComponent,
   ],
-  imports: [CommonModule, RouterModule, ControlPanelModule],
+  imports: [CommonModule, RouterModule, ControlPanelModule, SharedModule],
   exports: [
     ArchivesComponent,
     HistoryComponent,

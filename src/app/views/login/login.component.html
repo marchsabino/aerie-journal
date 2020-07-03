@@ -22,13 +22,9 @@
           placeholder="Password"
           required
         />
-        <button
-          (click)="login($event)"
-          class="btn btn-md btn-success btn-block mb-3"
-          formnovalidate
-        >
+        <app-action-button type="success" (perform)="login($event)">
           Sign in
-        </button>
+        </app-action-button>
         <small class="d-block mb-3">
           <a routerLink="/login">Forgot password</a>
         </small>

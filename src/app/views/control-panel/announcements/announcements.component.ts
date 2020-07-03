@@ -10,5 +10,9 @@ export class AnnouncementsComponent implements OnInit {
 
   constructor() {}
 
+  clearCurrentAnnouncement() {
+    window.confirm('Are you sure you wish to clear the current announcement?');
+  }
+
   ngOnInit(): void {}
 }

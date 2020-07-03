@@ -86,7 +86,7 @@
                 <option value="2">Administrator</option>
               </select>
             </div>
-            <div class="col-md-6 mb-2">
+            <div class="col-md-6 mb-3">
               <label for="position">Position</label>
               <select id="position">
                 <option value="Editor">Editor</option>
@@ -97,9 +97,9 @@
               </select>
             </div>
           </div>
-          <button class="btn btn-primary btn-sm mt-2 form-control">
+          <app-action-button>
             Create User
-          </button>
+          </app-action-button>
         </form>
       </div>
     </div>
@@ -153,13 +153,13 @@
                 </ng-container>
               </tbody>
             </table>
-            <button
-              (click)="deletePopup()"
-              class="btn btn-danger btn-sm mt-2 form-control"
+            <app-action-button
+              type="danger"
+              (perform)="deletePopup()"
               [disabled]="!anySelected()"
             >
               Delete Selected Users
-            </button>
+            </app-action-button>
           </div>
         </form>
       </div>

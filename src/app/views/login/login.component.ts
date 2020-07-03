@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   constructor(private router: Router, private userService: UserService) {}
 
-  login(event: Event) {
+  login(event: MouseEvent) {
     event.preventDefault();
     this.userService.setCurrentUser({
       firstName: 'Marcello',
@@ -26,9 +26,10 @@ export class LoginComponent implements OnInit {
       createdAt: new Date(),
       updatedAt: new Date(),
     });
-
     this.router.navigate(['/']);
   }
+
+  onSuccessfulLogin() {}
 
   ngOnInit(): void {}
 }
