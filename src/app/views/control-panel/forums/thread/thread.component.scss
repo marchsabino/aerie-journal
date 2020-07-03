@@ -1,0 +1,39 @@
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1rem;
+}
+.thread-author {
+  font-size: 0.9rem;
+  margin: 0.5rem 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+  img {
+    height: 24px;
+    width: 24px;
+    margin-right: 0.25rem;
+  }
+
+  .badge {
+    margin-left: 0.25rem;
+  }
+}
+
+.comment-author {
+  font-size: 0.9rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+
+  img {
+    height: 32px;
+    width: 32px;
+    margin-right: 0.25rem;
+  }
+
+  .badge {
+    margin-left: 0.25rem;
+  }
+}

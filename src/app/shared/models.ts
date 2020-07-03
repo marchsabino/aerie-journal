@@ -41,6 +41,28 @@ export interface Announcement extends BaseArtifact {
   expiration?: Date;
 }
 
+export interface ForumBoard extends BaseArtifact {
+  id: number;
+  title: string;
+  description?: string;
+  threads?: ForumThread[];
+}
+
+export interface ForumThread extends BaseArtifact {
+  id: number;
+  title: string;
+  content: string;
+  attachments?: any[];
+  author: User;
+  comments?: ForumComment[];
+}
+
+export interface ForumComment extends BaseArtifact {
+  id: number;
+  content: string;
+  author: User;
+}
+
 export interface FieldData<T> {
   data: T;
   disabled?: boolean;

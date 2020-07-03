@@ -14,6 +14,8 @@ import { SettingsComponent } from './views/control-panel/settings/settings.compo
 import { RoleGuard } from './shared/guards/role.guard';
 import { LoginGuard } from './shared/guards/login.guard';
 import { Privilege } from './shared/models';
+import { BoardComponent } from './views/control-panel/forums/board/board.component';
+import { ThreadComponent } from './views/control-panel/forums/thread/thread.component';
 
 const routes: Routes = [
   {
@@ -61,8 +63,28 @@ const routes: Routes = [
       },
       {
         path: 'forums',
-        pathMatch: 'full',
-        component: ForumsComponent,
+        children: [
+          {
+            path: '',
+            pathMatch: 'full',
+            component: ForumsComponent,
+          },
+          {
+            path: 'board',
+            children: [
+              {
+                path: ':id',
+                pathMatch: 'full',
+                component: BoardComponent,
+              },
+              {
+                path: ':id/thread/:threadId',
+                pathMatch: 'full',
+                component: ThreadComponent,
+              },
+            ],
+          },
+        ],
       },
       {
         path: 'announcements',
