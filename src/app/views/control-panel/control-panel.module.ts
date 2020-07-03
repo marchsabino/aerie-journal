@@ -8,6 +8,8 @@ import { ManageArchivesComponent } from './manage-archives/manage-archives.compo
 import { ForumsModule } from './forums/forums.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FormsModule } from '@angular/forms';
+import { NgxSummernoteModule } from 'ngx-summernote';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,13 @@ import { FormsModule } from '@angular/forms';
     SettingsComponent,
     ManageArchivesComponent,
   ],
-  imports: [CommonModule, ForumsModule, SharedModule, FormsModule],
+  imports: [
+    HttpClientModule,
+    CommonModule,
+    ForumsModule,
+    SharedModule,
+    FormsModule,
+    NgxSummernoteModule,
+  ],
 })
 export class ControlPanelModule {}

@@ -7,8 +7,8 @@
     (change)="fileBrowseHandler($event.target.files)"
     hidden
   />
-  <h1>Drag and Drop Files Here</h1>
+  <h1><ng-content></ng-content></h1>
   <label for="fileDropRef" class="btn btn-primary btn-sm">
-    or Browse for Files
+    Browse for Files
   </label>
 </div>

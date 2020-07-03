@@ -3,6 +3,12 @@
   <app-upload
     [accept]="['.png', '.jpg', '.jpeg']"
     (uploadComplete)="displayFiles($event)"
-  ></app-upload>
+  >
+    Upload Archive Cover Image
+  </app-upload>
   <img *ngIf="uploadedFile" [src]="uploadedFile" />
+  <div class="mt-3 mb-3">
+    <div [ngxSummernote]="summernoteConfig"></div>
+  </div>
+  <app-action-button>Create Archive</app-action-button>
 </div>
