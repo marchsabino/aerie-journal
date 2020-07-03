@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ManageArchivesComponent } from './manage-archives.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { NgxSummernoteModule } from 'ngx-summernote';
 
 describe('ManageArchivesComponent', () => {
   let component: ManageArchivesComponent;
@@ -8,9 +10,9 @@ describe('ManageArchivesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ManageArchivesComponent ]
-    })
-    .compileComponents();
+      imports: [SharedModule, NgxSummernoteModule, HttpClientTestingModule],
+      declarations: [ManageArchivesComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

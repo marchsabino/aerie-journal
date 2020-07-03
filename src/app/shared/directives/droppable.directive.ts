@@ -18,7 +18,7 @@ export class DroppableDirective {
   constructor() {}
 
   @HostListener('dragover', ['$event'])
-  onDragOver(event: DragEvent) {
+  onDragOver(event: any) {
     event.preventDefault();
     event.stopPropagation();
 
@@ -28,7 +28,7 @@ export class DroppableDirective {
   }
 
   @HostListener('dragleave', ['$event'])
-  onDragLeave(event: DragEvent) {
+  onDragLeave(event: any) {
     event.preventDefault();
     event.stopPropagation();
 
@@ -38,7 +38,7 @@ export class DroppableDirective {
   }
 
   @HostListener('drop', ['$event'])
-  onDrop(event: DragEvent) {
+  onDrop(event: any) {
     event.preventDefault();
     event.stopPropagation();
 
