@@ -4,5 +4,5 @@
     [accept]="['.png', '.jpg', '.jpeg']"
     (uploadComplete)="displayFiles($event)"
   ></app-upload>
-  <img [src]="uploadedFile" />
+  <img *ngIf="uploadedFile" [src]="uploadedFile" />
 </div>
