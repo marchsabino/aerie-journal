@@ -40,3 +40,9 @@ export interface Announcement extends BaseArtifact {
   content: string;
   expiration?: Date;
 }
+
+export interface FieldData<T> {
+  data: T;
+  disabled?: boolean;
+  checked?: boolean;
+}

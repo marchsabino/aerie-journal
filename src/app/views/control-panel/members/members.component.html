@@ -118,32 +118,45 @@
                 <tr>
                   <th scope="col">Name</th>
                   <th scope="col" class="text-right">
-                    Delete All <input type="checkbox" />
+                    <label class="d-inline mr-1" for="deleteAllCheckbox"
+                      >Delete All</label
+                    >
+                    <input
+                      id="deleteAllCheckbox"
+                      type="checkbox"
+                      (click)="selectAll($event)"
+                      [checked]="allSelected()"
+                    />
                   </th>
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let member of getStaffMembers()">
-                  <td>
-                    <img
-                      class="rounded"
-                      [src]="
-                        member.profileImage?.content ||
-                        'https://www.sackettwaconia.com/wp-content/uploads/default-profile.png'
-                      "
-                    />
-                    {{ member.firstName | titlecase }}
-                    {{ member.lastName | titlecase }}
-                  </td>
-                  <td class="text-right">
-                    <input type="checkbox" />
-                  </td>
-                </tr>
+                <ng-container
+                  *ngFor="let member of staffMembers; let staffIndex = index"
+                >
+                  <tr (click)="selectSingle(staffIndex)">
+                    <td>
+                      <img
+                        class="rounded"
+                        [src]="
+                          member.data.profileImage?.content ||
+                          'https://www.sackettwaconia.com/wp-content/uploads/default-profile.png'
+                        "
+                      />
+                      {{ member.data.firstName | titlecase }}
+                      {{ member.data.lastName | titlecase }}
+                    </td>
+                    <td class="text-right">
+                      <input type="checkbox" [checked]="member.checked" />
+                    </td>
+                  </tr>
+                </ng-container>
               </tbody>
             </table>
             <button
               (click)="deletePopup()"
               class="btn btn-danger btn-sm mt-2 form-control"
+              [disabled]="!anySelected()"
             >
               Delete Selected Users
             </button>

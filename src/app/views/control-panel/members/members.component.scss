@@ -1,4 +1,12 @@
 table {
+  &.table-hover {
+    tbody {
+      tr:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
   img {
     width: 32px;
     height: 32px;
