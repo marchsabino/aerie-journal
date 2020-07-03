@@ -1,0 +1,23 @@
+<div
+  *ngIf="user"
+  class="d-block d-md-none border-bottom pb-3 mb-3"
+  [ngClass]="{
+    'border-secondary': theme === 'light',
+    'border-gray': theme === 'dark'
+  }"
+>
+  <div class="float-left d-inline-block mt-1 mr-2">
+    <app-profile-image [user]="user"></app-profile-image>
+  </div>
+  <div class="d-inline-block">
+    <strong [class]="'text-' + theme">
+      {{ user.firstName | titlecase }}
+      {{ user.lastName | titlecase }}
+    </strong>
+    <br />
+    <span class="badge badge-primary">{{ user.privilege | privilege }}</span>
+    <span class="badge badge-secondary ml-1">{{
+      user.position | titlecase
+    }}</span>
+  </div>
+</div>

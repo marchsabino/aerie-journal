@@ -1,0 +1,10 @@
+<img
+  class="profile-image rounded"
+  [src]="
+    user?.profileImage?.content ||
+    'https://www.sackettwaconia.com/wp-content/uploads/default-profile.png'
+  "
+  [alt]="alt | titlecase"
+  [title]="alt | titlecase"
+  [ngStyle]="{ width: width, height: height }"
+/>

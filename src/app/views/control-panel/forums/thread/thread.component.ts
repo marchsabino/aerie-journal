@@ -19,9 +19,9 @@ export class ThreadComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const threadId = this.activatedRoute.snapshot.params['threadId'];
+    const threadId = this.activatedRoute.snapshot.params.threadId;
     this.forumService
-      .getBoardById(this.activatedRoute.snapshot.params['id'])
+      .getBoardById(this.activatedRoute.snapshot.params.id)
       .subscribe((board) => {
         this.board = board;
         this.thread = board.threads.find(

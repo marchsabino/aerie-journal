@@ -23,8 +23,6 @@ export class DroppableDirective {
     event.stopPropagation();
 
     this.fileOver = true;
-
-    console.log('Drag Over');
   }
 
   @HostListener('dragleave', ['$event'])
@@ -33,8 +31,6 @@ export class DroppableDirective {
     event.stopPropagation();
 
     this.fileOver = false;
-
-    console.log('Drag Leave');
   }
 
   @HostListener('drop', ['$event'])
@@ -47,7 +43,6 @@ export class DroppableDirective {
 
     if (files.length > 0) {
       this.fileDropped.emit(files);
-      console.log(`You dropped ${files.length} files.`);
     }
   }
 }

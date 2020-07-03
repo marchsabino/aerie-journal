@@ -7,22 +7,7 @@
     / {{ thread?.title | titlecase }}
   </h6>
   <h1>{{ thread?.title | titlecase }}</h1>
-  <div class="thread-author">
-    <img
-      class="rounded"
-      [src]="
-        thread?.author.profileImage?.content ||
-        'https://www.sackettwaconia.com/wp-content/uploads/default-profile.png'
-      "
-    />
-    <strong
-      >{{ thread?.author.firstName | titlecase }}
-      {{ thread?.author.lastName | titlecase }}</strong
-    >
-    <span class="badge badge-primary">{{
-      thread?.author.privilege | privilege
-    }}</span>
-  </div>
+  <app-user-block [user]="thread?.author"></app-user-block>
   {{ thread?.content }}
 </div>
 
@@ -30,22 +15,7 @@
   *ngFor="let comment of thread?.comments"
   class="my-3 p-3 bg-white rounded shadow-sm"
 >
-  <div class="comment-author">
-    <img
-      class="rounded"
-      [src]="
-        comment.author.profileImage?.content ||
-        'https://www.sackettwaconia.com/wp-content/uploads/default-profile.png'
-      "
-    />
-    <strong
-      >{{ comment.author.firstName | titlecase }}
-      {{ comment.author.lastName | titlecase }}</strong
-    >
-    <span class="badge badge-primary">{{
-      comment.author.privilege | privilege
-    }}</span>
-  </div>
+  <app-user-block [user]="comment.author"></app-user-block>
   {{ comment.content }}
 </div>
 <div class="my-3 p-3 bg-white rounded shadow-sm">

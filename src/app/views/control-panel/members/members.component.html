@@ -14,13 +14,7 @@
       <tbody>
         <tr *ngFor="let member of members">
           <td>
-            <img
-              class="rounded"
-              [src]="
-                member.profileImage?.content ||
-                'https://www.sackettwaconia.com/wp-content/uploads/default-profile.png'
-              "
-            />
+            <app-profile-image [user]="member"></app-profile-image>
             <a [href]="'mailto:' + member.email">
               {{ member.firstName | titlecase }}
               {{ member.lastName | titlecase }}
@@ -136,13 +130,9 @@
                 >
                   <tr (click)="selectSingle(staffIndex)">
                     <td>
-                      <img
-                        class="rounded"
-                        [src]="
-                          member.data.profileImage?.content ||
-                          'https://www.sackettwaconia.com/wp-content/uploads/default-profile.png'
-                        "
-                      />
+                      <app-profile-image
+                        [user]="member.data"
+                      ></app-profile-image>
                       {{ member.data.firstName | titlecase }}
                       {{ member.data.lastName | titlecase }}
                     </td>

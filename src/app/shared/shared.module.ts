@@ -5,6 +5,8 @@ import { PrivilegePipe } from './pipes/privilege.pipe';
 import { ActionButtonComponent } from './components/action-button/action-button.component';
 import { UploadComponent } from './components/upload/upload.component';
 import { DroppableDirective } from './directives/droppable.directive';
+import { UserBlockComponent } from './components/user-block/user-block.component';
+import { ProfileImageComponent } from './components/profile-image/profile-image.component';
 
 @NgModule({
   declarations: [
@@ -13,14 +15,18 @@ import { DroppableDirective } from './directives/droppable.directive';
     ActionButtonComponent,
     UploadComponent,
     DroppableDirective,
+    UserBlockComponent,
+    ProfileImageComponent,
   ],
   imports: [CommonModule],
   exports: [
     AnnouncementComponent,
-    ActionButtonComponent,
     PrivilegePipe,
+    ActionButtonComponent,
     UploadComponent,
     DroppableDirective,
+    UserBlockComponent,
+    ProfileImageComponent,
   ],
 })
 export class SharedModule {}

@@ -1,21 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StaffComponent } from './staff.component';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { UserBlockComponent } from './user-block.component';
+import { SharedModule } from '../../shared.module';
 
-describe('StaffComponent', () => {
-  let component: StaffComponent;
-  let fixture: ComponentFixture<StaffComponent>;
+describe('UserInfoComponent', () => {
+  let component: UserBlockComponent;
+  let fixture: ComponentFixture<UserBlockComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [SharedModule],
-      declarations: [StaffComponent],
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StaffComponent);
+    fixture = TestBed.createComponent(UserBlockComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

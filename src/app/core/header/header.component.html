@@ -15,29 +15,8 @@
     <i class="fas fa-bars"></i>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <div class="navbar-nav mr-auto">
-      <div
-        *ngIf="currentUser"
-        class="d-block d-md-none border-bottom border-secondary pt-2 pb-3 mb-3"
-      >
-        <img
-          class="float-left rounded d-block"
-          [src]="currentUser.profileImage?.content"
-        />
-        <div class="float-left d-block">
-          <strong class="text-light">
-            {{ currentUser.firstName | titlecase }}
-            {{ currentUser.lastName | titlecase }}
-          </strong>
-          <br />
-          <span class="badge badge-primary">{{
-            currentUser.privilege | privilege
-          }}</span>
-          <span class="badge badge-secondary ml-1">{{
-            currentUser.position | titlecase
-          }}</span>
-        </div>
-      </div>
+    <div class="navbar-nav mr-auto pt-2">
+      <app-user-block [user]="currentUser" theme="light"></app-user-block>
       <a
         class="nav-link"
         routerLink="/"

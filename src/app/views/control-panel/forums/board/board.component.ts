@@ -18,7 +18,7 @@ export class BoardComponent implements OnInit {
 
   ngOnInit(): void {
     this.forumService
-      .getBoardById(this.activatedRoute.snapshot.params['id'])
+      .getBoardById(this.activatedRoute.snapshot.params.id)
       .subscribe((board) => (this.board = board));
   }
 }

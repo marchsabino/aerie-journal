@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ManageArchivesComponent implements OnInit {
   private readonly reader = new FileReader();
-  uploadedFile: string = '';
+  uploadedFile = '';
   summernoteConfig = {
     height: '10rem',
     placeholder: 'Type the archive here...',

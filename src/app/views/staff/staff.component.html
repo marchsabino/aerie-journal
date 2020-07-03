@@ -22,14 +22,7 @@
       <tbody>
         <tr *ngFor="let user of users">
           <td>
-            <img
-              class="rounded"
-              [src]="
-                user.profileImage?.content ||
-                'https://www.sackettwaconia.com/wp-content/uploads/default-profile.png'
-              "
-              [alt]="user.firstName + ' ' + user.lastName"
-            />
+            <app-profile-image [user]="user"></app-profile-image>
           </td>
           <td>{{ user.firstName }} {{ user.lastName }}</td>
           <td>{{ user.position | titlecase }}</td>
