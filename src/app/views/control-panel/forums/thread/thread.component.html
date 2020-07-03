@@ -20,23 +20,9 @@
 </div>
 <div class="my-3 p-3 bg-white rounded shadow-sm">
   <h2>Comment</h2>
-  <textarea
-    [(ngModel)]="content"
-    class="form-control"
+  <app-text-form
+    buttonText="Comment"
     placeholder="Reply to thread..."
-    maxlength="140"
-  >
-        {{ content }}
-      </textarea
-  >
-  <span
-    class="pt-1 mb-2 d-block text-right small"
-    [ngClass]="{
-      'text-muted': content.length < 120,
-      'text-danger': content.length >= 120
-    }"
-  >
-    {{ content.length }}/140
-  </span>
-  <app-action-button>Comment</app-action-button>
+    [includeTitle]="false"
+  ></app-text-form>
 </div>

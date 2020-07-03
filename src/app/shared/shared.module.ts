@@ -7,6 +7,8 @@ import { UploadComponent } from './components/upload/upload.component';
 import { DroppableDirective } from './directives/droppable.directive';
 import { UserBlockComponent } from './components/user-block/user-block.component';
 import { ProfileImageComponent } from './components/profile-image/profile-image.component';
+import { TextFormComponent } from './components/text-form/text-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,8 +19,9 @@ import { ProfileImageComponent } from './components/profile-image/profile-image.
     DroppableDirective,
     UserBlockComponent,
     ProfileImageComponent,
+    TextFormComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   exports: [
     AnnouncementComponent,
     PrivilegePipe,
@@ -27,6 +30,7 @@ import { ProfileImageComponent } from './components/profile-image/profile-image.
     DroppableDirective,
     UserBlockComponent,
     ProfileImageComponent,
+    TextFormComponent,
   ],
 })
 export class SharedModule {}

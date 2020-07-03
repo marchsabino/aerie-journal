@@ -2,30 +2,12 @@
   <h6 class="border-bottom border-gray pb-2 mb-3">Create an Announcement</h6>
   <div class="row">
     <div class="col-md-8 col-lg-6">
-      <input type="text" class="form-control" placeholder="Title" />
-      <textarea
-        [(ngModel)]="content"
-        class="form-control"
-        placeholder="Enter announcement text..."
-        maxlength="140"
-      >
-        {{ content }}
-      </textarea>
-      <span
-        class="pt-1 mb-2 d-block text-right small"
-        [ngClass]="{
-          'text-muted': content.length < 120,
-          'text-danger': content.length >= 120
-        }"
-      >
-        {{ content.length }}/140
-      </span>
-      <app-action-button>Submit</app-action-button>
+      <app-text-form [maxLength]="180"></app-text-form>
     </div>
   </div>
-  <h6 class="border-bottom border-gray pb-2 mt-4 mb-3">
-    Previous Announcements
-  </h6>
+</div>
+<div class="my-3 p-3 bg-white rounded shadow-sm">
+  <h6 class="border-bottom border-gray pb-2 mb-3">Previous Announcements</h6>
   <div class="table-responsive">
     <table class="table table-striped table-hover table-sm">
       <caption class="small text-right">
@@ -67,7 +49,9 @@
       </tbody>
     </table>
   </div>
-  <h6 class="border-bottom border-gray pb-2 mt-2 mb-3">
+</div>
+<div class="my-3 p-3 bg-white rounded shadow-sm">
+  <h6 class="border-bottom border-gray pb-2 mb-3">
     Clear Current Announcement
   </h6>
   <div class="row">

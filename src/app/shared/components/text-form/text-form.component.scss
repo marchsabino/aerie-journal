@@ -1,0 +1,18 @@
+.form-control {
+  &:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+  }
+}
+
+textarea {
+  height: 7rem;
+  min-height: 6rem;
+  resize: vertical;
+}
+
+input[type="text"] {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}

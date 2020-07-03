@@ -1,0 +1,30 @@
+<input
+  *ngIf="includeTitle"
+  type="text"
+  class="form-control"
+  [placeholder]="titlePlaceholder"
+/>
+<textarea
+  [(ngModel)]="content"
+  class="form-control"
+  [placeholder]="placeholder"
+  [maxlength]="maxLength"
+  [ngStyle]="{
+    'border-top-left-radius': includeTitle ? 0 : '0.25rem',
+    'border-top-right-radius': includeTitle ? 0 : '0.25rem'
+  }"
+  >{{ content }}
+</textarea>
+<span
+  class="pt-1 mb-2 d-block text-right small"
+  [ngClass]="{
+    'text-muted': content.length < maxLength * 0.8,
+    'text-danger': content.length >= maxLength * 0.8
+  }"
+>
+  {{ content.length }}/{{ maxLength }}
+</span>
+<div *ngIf="includeUpload" class="mt-2 mb-3">
+  <app-upload></app-upload>
+</div>
+<app-action-button>{{ buttonText }}</app-action-button>
