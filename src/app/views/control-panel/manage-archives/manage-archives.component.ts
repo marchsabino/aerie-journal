@@ -43,6 +43,6 @@ export class ManageArchivesComponent implements OnInit {
     this.reader.addEventListener('load', () => {
       this.uploadedFile = this.reader.result.toString();
     });
-    this.reader.readAsDataURL(files[0]);
+    this.reader.readAsDataURL(files.pop());
   }
 }
