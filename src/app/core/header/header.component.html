@@ -15,8 +15,10 @@
     <i class="fas fa-bars"></i>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <div class="navbar-nav mr-auto pt-2">
-      <app-user-block [user]="currentUser" theme="light"></app-user-block>
+    <div class="navbar-nav mr-auto">
+      <div class="d-block d-md-none pt-2">
+        <app-user-block [user]="currentUser" theme="light"></app-user-block>
+      </div>
       <a
         class="nav-link"
         routerLink="/"
