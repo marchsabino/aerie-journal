@@ -21,30 +21,22 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Aerie Open Mic. Event</td>
-          <td><span class="badge badge-success">Active</span></td>
-          <td class="d-none d-sm-table-cell">Marcello</td>
-        </tr>
-        <tr>
-          <td>Aerie Open Mic. Event This is a longer</td>
-          <td><span class="badge badge-warning">Override</span></td>
-          <td class="d-none d-sm-table-cell">Marcello</td>
-        </tr>
-        <tr>
-          <td>Aerie Open Mic. Event This is a longer</td>
-          <td><span class="badge badge-info">Expired</span></td>
-          <td class="d-none d-sm-table-cell">Marcello</td>
-        </tr>
-        <tr>
-          <td>Aerie Open Mic. Event This is a longer</td>
-          <td><span class="badge badge-info">Expired</span></td>
-          <td class="d-none d-sm-table-cell">Marcello</td>
-        </tr>
-        <tr>
-          <td>We have a winner!</td>
-          <td><span class="badge badge-danger">Cleared</span></td>
-          <td class="d-none d-sm-table-cell">Marcello</td>
+        <tr *ngFor="let announcement of announcements">
+          <td>{{ announcement.title | titlecase }}</td>
+          <td>
+            <span
+              class="badge"
+              [ngClass]="{
+                'badge-success': announcement.status === 'Active',
+                'badge-danger': announcement.status === 'Cleared',
+                'badge-secondary': !announcement.status
+              }"
+              >{{ announcement.status || "Inactive" }}</span
+            >
+          </td>
+          <td class="d-none d-sm-table-cell">
+            {{ announcement.author.firstName | titlecase }}
+          </td>
         </tr>
       </tbody>
     </table>

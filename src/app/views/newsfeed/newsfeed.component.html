@@ -1,28 +1,26 @@
 <div class="my-3 p-3 bg-white rounded shadow-sm">
-  <h6 class="border-bottom border-gray pb-2 mb-0">Recent Updates</h6>
-  <ng-container *ngIf="!articles; else showArticles">
+  <h6 class="border-bottom border-gray pb-2 mb-0">Recent Announcements</h6>
+  <ng-container *ngIf="!announcements; else showAnnouncements">
     <div class="media text-muted pt-3">
-      There are currently no news articles...
+      There are currently no announcements...
     </div>
   </ng-container>
-  <ng-template #showArticles>
-    <ng-container *ngFor="let article of articles">
+  <ng-template #showAnnouncements>
+    <ng-container *ngFor="let announcement of filteredAnnouncements">
       <div class="media pt-3">
-        <img
-          class="mr-2 rounded"
-          [src]="article.author.profileImage.content"
-          [alt]="article.author.email"
-        />
+        <div class="mr-2">
+          <app-profile-image [user]="announcement.author"></app-profile-image>
+        </div>
         <div class="media-body pb-3 mb-0 lh-125 border-bottom border-gray">
           <strong class="d-block text-gray-dark">
-            {{ article.title | titlecase }}
+            {{ announcement.title | titlecase }}
           </strong>
-          <div [innerHtml]="article.content"></div>
+          <div [innerHtml]="announcement.content"></div>
         </div>
       </div>
     </ng-container>
     <small class="d-block text-right mt-3">
-      <a routerLink="/">All updates</a>
+      <a routerLink="/">All announcements</a>
     </small>
   </ng-template>
 </div>

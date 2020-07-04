@@ -13,8 +13,8 @@ export class AnnouncementComponent implements OnInit {
 
   ngOnInit(): void {
     this.announcementService.getAnnouncement().subscribe((announcement) => {
-      // If the expiration date is null, we should show it
-      if (announcement?.expiration ?? new Date() >= new Date()) {
+      // Hide stuff 30 days old;
+      if (announcement.createdAt <= new Date()) {
         this.announcement = announcement;
       }
     });

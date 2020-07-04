@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NewsArticle } from 'src/app/shared/models';
-import { NewsFeedService } from 'src/app/shared/services/news-feed.service';
+import { AnnouncementService } from 'src/app/shared/services/announcement.service';
+import { Announcement } from 'src/app/shared/models';
 
 @Component({
   selector: 'app-newsfeed',
@@ -8,17 +8,19 @@ import { NewsFeedService } from 'src/app/shared/services/news-feed.service';
   styleUrls: ['./newsfeed.component.scss'],
 })
 export class NewsfeedComponent implements OnInit {
-  articles: NewsArticle[];
+  filteredAnnouncements: Announcement[];
+  announcements: Announcement[];
 
-  constructor(private newsFeed: NewsFeedService) {}
+  constructor(private announcementService: AnnouncementService) {}
 
-  getArticles() {
-    this.newsFeed.getNewsArticles().subscribe((articles) => {
-      this.articles = articles;
+  getAnnouncements() {
+    this.announcementService.getAnnouncements().subscribe((announcements) => {
+      this.announcements = announcements;
+      this.filteredAnnouncements = announcements.splice(0, 3);
     });
   }
 
   ngOnInit(): void {
-    this.getArticles();
+    this.getAnnouncements();
   }
 }

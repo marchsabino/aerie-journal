@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Announcement } from 'src/app/shared/models';
+import { AnnouncementService } from 'src/app/shared/services/announcement.service';
 
 @Component({
   selector: 'app-announcements',
@@ -6,13 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./announcements.component.scss'],
 })
 export class AnnouncementsComponent implements OnInit {
-  content = '';
+  announcements: Announcement[] = [];
 
-  constructor() {}
+  constructor(private announcementService: AnnouncementService) {}
 
   clearCurrentAnnouncement() {
     window.confirm('Are you sure you wish to clear the current announcement?');
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.announcementService.getAnnouncements().subscribe((announcements) => {
+      this.announcements = announcements;
+    });
+  }
 }

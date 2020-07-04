@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/shared/services/user.service';
-import { Privilege } from 'src/app/shared/models';
+import { Privilege, User } from 'src/app/shared/models';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,27 +9,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
+  private users: User[] = [];
+
   constructor(private router: Router, private userService: UserService) {}
 
   login(event: MouseEvent) {
     event.preventDefault();
-    this.userService.setCurrentUser({
-      firstName: 'Marcello',
-      lastName: 'Sabino',
-      email: 'marchsabino@gmail.com',
-      privilege: Privilege.ROOT,
-      position: 'Web Developer',
-      profileImage: {
-        content:
-          'https://avatars0.githubusercontent.com/u/58456034?s=460&u=30049529104bb2646e50b43e0a684a7235736cbf&v=4',
-      },
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    });
+    this.userService.setCurrentUser(
+      this.users[Math.random() * this.users.length]
+    );
     this.router.navigate(['/']);
   }
 
   onSuccessfulLogin() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.userService.getUsers().subscribe((users) => {
+      this.users = users;
+    });
+  }
 }

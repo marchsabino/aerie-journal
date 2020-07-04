@@ -4,53 +4,8 @@
     <strong>Hey {{ currentUser?.firstName | titlecase }} 👋</strong>
   </p>
   <p>
-    Welcome to the Aerie Journal's Control Panel! Here you will be able to
-    several tasks as a staff member! Depending on your role at Aerie Journal,
-    the more access you will have. Below will outline each section that you,
-    based on your current role as
-    <strong>{{ currentUser.privilege | privilege }}</strong
-    >, will have access to.
+    Welcome to the Aerie Journal's Control Panel. Here you will have access to
+    certain activities depending on your access level. This page may not look
+    like much now, but eventually this page will have more information on it.
   </p>
-  <h6 class="border-bottom border-gray pb-2 mt-3">Dashboard</h6>
-  This is the current page that you are on. In essence, this page is here for
-  you as your roadmap to the control panel.
-  <h6 class="border-bottom border-gray pb-2 mt-3">Forums</h6>
-  Forums allow the Aerie Journal Staff to communicate easily over the website.
-  In your current role, you have the following capabilities within the Forums:
-  <ul class="mt-3 mb-3">
-    <li>Create threads within boards</li>
-    <li>Delete your own threads</li>
-    <li>Comment on threads</li>
-    <li>Delete your own comments</li>
-    <ng-container *ngIf="currentUser.privilege >= 1">
-      <li>Delete other's comments</li>
-      <li>Delete other's threads</li>
-    </ng-container>
-    <ng-container *ngIf="currentUser.privilege >= 2">
-      <li>Create new boards</li>
-      <li>Delete existing boards</li>
-    </ng-container>
-  </ul>
-  <h6 class="border-bottom border-gray pb-2 mt-3">Announcements</h6>
-  Announcements show at the top of the website on all pages with a yellow
-  background. These are useful when you want to get word out about certain
-  things. Such as: events, due dates, or best wishes. Announcements all have
-  "start" and "end" dates that are set and will only appear on the page when it
-  falls within that timeframe. Only one announcement can be made at a single
-  time.
-  <ul class="mt-3">
-    <li>Create new announcements</li>
-    <li>Delete existing announcements</li>
-  </ul>
-  <h6 class="border-bottom border-gray pb-2 mt-3">Members</h6>
-  TODO
-  <h6
-    *ngIf="currentUser.privilege >= 2"
-    class="border-bottom border-gray pb-2 mt-3"
-  >
-    Archives
-  </h6>
-  TODO
-  <h6 class="border-bottom border-gray pb-2 mt-3">Settings</h6>
-  TODO
 </div>

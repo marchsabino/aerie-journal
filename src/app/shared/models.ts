@@ -10,12 +10,6 @@ export interface BaseArtifact {
   updatedAt: Date;
 }
 
-export interface NewsArticle extends BaseArtifact {
-  author: User;
-  title: string;
-  content: string;
-}
-
 export interface Image {
   content: string;
 }
@@ -36,9 +30,10 @@ export interface Archive extends BaseArtifact {
 }
 
 export interface Announcement extends BaseArtifact {
-  title?: string;
+  title: string;
   content: string;
-  expiration?: Date;
+  author: User;
+  status?: string;
 }
 
 export interface ForumBoard extends BaseArtifact {
