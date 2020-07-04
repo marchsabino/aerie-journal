@@ -6,9 +6,20 @@
     [accept]="accept.join()"
     (change)="fileBrowseHandler($event.target.files)"
     hidden
+    multiple
   />
   <h1><ng-content></ng-content></h1>
   <label for="fileDropRef" class="btn btn-success btn-sm">
     Browse for Files
   </label>
 </div>
+<ng-container *ngFor="let file of files; let i = index">
+  <div class="attachment p-1 d-flex">
+    <span class="pl-1 pt-1"
+      ><i class="fas fa-paperclip"></i> {{ file.name }}</span
+    >
+    <button class="ml-auto btn btn-danger btn-sm" (click)="removeAttachment(i)">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+</ng-container>

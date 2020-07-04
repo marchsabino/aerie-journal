@@ -28,7 +28,12 @@
     {{ textForm.get("content").value.length }}/{{ maxLength }}
   </span>
   <div *ngIf="includeUpload" class="mt-2 mb-3">
-    <app-upload>Upload Attachments</app-upload>
+    <app-upload
+      [accept]="['.jpg', '.jpeg', '.doc', '.docx', '.pdf', '.png']"
+      [maxAllowed]="5"
+    >
+      Upload Attachments
+    </app-upload>
   </div>
   <app-action-button [disabled]="textForm.invalid">{{
     buttonText

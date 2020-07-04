@@ -1,12 +1,8 @@
 <div class="my-3 p-3 bg-white rounded shadow-sm">
   <h6 class="border-bottom border-gray pb-2 mb-3">Create an Archive</h6>
-  <app-upload
-    [accept]="['.png', '.jpg', '.jpeg']"
-    (uploadComplete)="displayFiles($event)"
-  >
+  <app-upload [accept]="['.png', '.jpg', '.jpeg']">
     Upload Archive Cover Image
   </app-upload>
-  <img *ngIf="uploadedFile" [src]="uploadedFile" />
   <div class="mt-3 mb-3">
     <div [ngxSummernote]="summernoteConfig"></div>
   </div>
