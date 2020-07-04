@@ -20,7 +20,11 @@
           type="password"
           placeholder="Password"
         />
-        <app-action-button type="success" (perform)="login($event)">
+        <app-action-button
+          type="success"
+          (perform)="login($event)"
+          [disabled]="!users"
+        >
           Sign in
         </app-action-button>
         <small class="d-block mt-2 mb-3">

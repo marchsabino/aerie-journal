@@ -9,14 +9,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  private users: User[] = [];
+  users: User[];
 
   constructor(private router: Router, private userService: UserService) {}
 
   login(event: MouseEvent) {
     event.preventDefault();
     this.userService.setCurrentUser(
-      this.users[Math.random() * this.users.length]
+      this.users[Math.floor(Math.random() * this.users.length)]
     );
     this.router.navigate(['/']);
   }
