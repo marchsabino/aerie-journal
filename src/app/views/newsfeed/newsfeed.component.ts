@@ -16,7 +16,7 @@ export class NewsfeedComponent implements OnInit {
   getAnnouncements() {
     this.announcementService.getAnnouncements().subscribe((announcements) => {
       this.announcements = announcements;
-      this.filteredAnnouncements = announcements.splice(0, 3);
+      this.filteredAnnouncements = announcements.slice(0, 3);
     });
   }
 

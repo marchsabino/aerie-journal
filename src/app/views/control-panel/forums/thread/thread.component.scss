@@ -5,6 +5,7 @@ h1 {
 h2 {
   font-size: 1rem;
 }
+
 .thread-author {
   font-size: 0.9rem;
   margin: 0.5rem 0 1rem 0;
@@ -35,5 +36,19 @@ h2 {
 
   .badge {
     margin-left: 0.25rem;
+  }
+}
+
+small {
+  & i {
+    &::after {
+      color: #6c757d;
+      white-space: pre-wrap;
+      content: " \00b7 ";
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

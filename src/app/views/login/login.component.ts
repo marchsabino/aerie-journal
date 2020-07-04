@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   login(event: MouseEvent) {
     event.preventDefault();
     this.userService.setCurrentUser(
-      this.users[Math.floor(Math.random() * this.users.length)]
+      this.users[9] // that's me
     );
     this.router.navigate(['/']);
   }

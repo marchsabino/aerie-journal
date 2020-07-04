@@ -9,6 +9,11 @@
   <h1>{{ thread?.title | titlecase }}</h1>
   <app-user-block [user]="thread?.author"></app-user-block>
   {{ thread?.content }}
+  <small class="d-block mt-3 text-muted">
+    <i class="far fa-trash-alt text-danger"></i>
+    Last updated on
+    {{ thread?.updatedAt | date: "MMMM dd, yyyy 'at' HH:mm aa" }}
+  </small>
 </div>
 
 <div
@@ -17,6 +22,11 @@
 >
   <app-user-block [user]="comment.author"></app-user-block>
   {{ comment.content }}
+  <small class="d-block mt-3 text-muted">
+    <i class="far fa-trash-alt text-danger"></i>
+    Last updated on
+    {{ comment?.updatedAt | date: "MMMM dd, yyyy 'at' HH:mm aa" }}
+  </small>
 </div>
 <div class="my-3 p-3 bg-white rounded shadow-sm">
   <h6 class="border-bottom border-gray pb-2 mb-3">
