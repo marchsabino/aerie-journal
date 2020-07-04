@@ -1,4 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {
+  FormGroup,
+  FormControl,
+  RequiredValidator,
+  Validators,
+  FormBuilder,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-text-form',
@@ -6,7 +13,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./text-form.component.scss'],
 })
 export class TextFormComponent implements OnInit {
-  content = '';
+  textForm = new FormGroup({});
 
   @Input() includeTitle = true;
   @Input() titlePlaceholder = 'Title';
@@ -16,7 +23,12 @@ export class TextFormComponent implements OnInit {
   @Input() buttonText = 'Submit';
   @Input() placeholder = 'Type a message...';
 
-  constructor() {}
+  constructor(private fb: FormBuilder) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.textForm = this.fb.group({
+      title: ['', this.includeTitle ? Validators.required : null],
+      content: ['', [Validators.required, Validators.max(this.maxLength)]],
+    });
+  }
 }

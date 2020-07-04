@@ -8,7 +8,7 @@ import { DroppableDirective } from './directives/droppable.directive';
 import { UserBlockComponent } from './components/user-block/user-block.component';
 import { ProfileImageComponent } from './components/profile-image/profile-image.component';
 import { TextFormComponent } from './components/text-form/text-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { FormsModule } from '@angular/forms';
     ProfileImageComponent,
     TextFormComponent,
   ],
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule],
   exports: [
     AnnouncementComponent,
     PrivilegePipe,
