@@ -40,7 +40,9 @@ export class UploadComponent implements OnInit {
   private prepareFilesList(files: FileList): void {
     const filesArr = Array.from(files);
 
-    if (this.files.length >= this.maxAllowed) { return; }
+    if (this.files.length > this.maxAllowed) {
+      return;
+    }
 
     if (filesArr.length > this.maxAllowed) {
       filesArr.splice(0, this.maxAllowed);
