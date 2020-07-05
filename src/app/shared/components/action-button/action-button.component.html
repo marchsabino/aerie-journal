@@ -1,6 +1,6 @@
 <button
   (click)="onClick($event)"
-  [ngClass]="['btn', 'btn-' + type, 'form-control']"
+  [ngClass]="['btn', 'btn-' + type, 'btn-sm', 'form-control']"
   [disabled]="disabled || loading"
 >
   <ng-container *ngIf="loading; else showContent">

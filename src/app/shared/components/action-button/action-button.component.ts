@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class ActionButtonComponent implements OnInit {
   @Input() loading = false;
   @Input() text = 'Submit';
-  @Input() type: 'primary' | 'success' | 'danger' = 'primary';
+  @Input() type: 'primary' | 'success' | 'danger' | 'secondary' = 'primary';
   @Input() disabled = false;
 
   @Output() perform = new EventEmitter<MouseEvent>();

@@ -1,1 +1,38 @@
-<p>settings works!</p>
+<div class="my-3 p-3 bg-white rounded shadow-sm">
+  <div class="profile-header clearfix">
+    <div class="profile-picture float-left">
+      <app-profile-image
+        [user]="user"
+        width="90px"
+        height="90px"
+      ></app-profile-image>
+    </div>
+    <div class="profile-info float-left">
+      <h1>
+        {{ user?.firstName | titlecase }} {{ user?.lastName | titlecase }}
+      </h1>
+      <div class="badge badge-primary">{{ user?.privilege | privilege }}</div>
+      <div class="badge badge-secondary ml-1">
+        {{ user?.position | titlecase }}
+      </div>
+    </div>
+  </div>
+  <div *ngIf="showUpload" class="mt-2">
+    <app-upload [accept]="['.jpg', '.png', '.jpeg']"
+      >Upload Profile Image</app-upload
+    >
+    <div class="mt-2">
+      <app-action-button type="success">Save</app-action-button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <button
+        (click)="toggleUpload()"
+        class="mt-2 form-control btn btn-secondary btn-sm"
+      >
+        Change Profile Image
+      </button>
+    </div>
+  </div>
+</div>
